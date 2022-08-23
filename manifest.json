@@ -1,0 +1,39 @@
+{
+  "name": "SKK Japanese Input Method",
+  "version": "0.0.0",
+  "manifest_version": 3,
+  "description": "An SKK implementation for ChromeOS",
+  "background": {
+    "service_worker": "main.js",
+    "type": "module"
+  },
+  "options_page": "index.html",
+  "input_components": [
+    {
+      "name": "SKK for US keyboard",
+      "type": "ime",
+      "id": "skk.tzik.jp/us",
+      "description": "An SKK clone",
+      "language": "ja",
+      "layouts": ["us"]
+    },{
+      "name": "SKK for JP keyboard",
+      "type": "ime",
+      "id": "skk.tzik.jp/jp",
+      "description": "An SKK clone",
+      "language": "ja",
+      "layouts": ["jp"]
+    },{
+      "name": "SKK for Dvorak keyboard",
+      "type": "ime",
+      "id": "skk.tzik.jp/us-dvorak",
+      "description": "An SKK clone",
+      "language": "ja",
+      "layouts": ["us-dvorak"]
+    }
+  ],
+  "permissions": ["input"],
+  "host_permissions": [
+    "https://skk-dev.github.io/dict/*"
+  ]
+}
